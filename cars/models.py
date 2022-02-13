@@ -133,6 +133,7 @@ class Cars(models.Model):
     car_category = models.ForeignKey(Category, on_delete= models.CASCADE)
     colour = models.CharField(max_length=50)
     mpg = models.CharField(max_length=50)
+    engine = models.CharField(max_length=50)
     seats = models.IntegerField()
     doors = models.IntegerField()
 
@@ -149,7 +150,6 @@ class Cars(models.Model):
     # cretae single textfields to handle description
     usb_charger = models.BooleanField(default=False)
     gps = models.BooleanField()
-    automatic = models.BooleanField()
     sunroof = models.BooleanField()
     apple_car_play = models.BooleanField()
     all_wheel_drive = models.BooleanField()
