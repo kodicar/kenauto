@@ -53,12 +53,12 @@ img {
 
 #showcase {
 	/*background: url(../img/showcase.jpg) no-repeat top center;*/
-	/*background: linear-gradient( #0c0d0e, rgba(0, 0, 0, 0.5) ), url(../img/one/one5.jpg) fixed;*/
-	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/one/one5.jpg) fixed;
-	/*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/one/one5.jpg) fixed;*/
-	/*background: url(../img/one/one5.jpg) fixed;*/
+	/*background: linear-gradient( #0c0d0e, rgba(0, 0, 0, 0.5) ), url(../img/one/car1.jpeg) fixed;*/
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/one/car1.jpeg) fixed;
+	/*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/one/car1.jpeg) fixed;*/
+	/*background: url(../img/one/car1.jpeg) fixed;*/
 	/*background-color: #0c0d0e;*/
-	/*background: url(../img/one/one5.jpg) fixed;*/
+	/*background: url(../img/one/car1.jpeg) fixed;*/
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	/*background: rgba(51, 51, 51, 0.8); */

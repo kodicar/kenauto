@@ -22,7 +22,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            {% comment %} <a href="{% url 'index' %}"> {% endcomment %}
+            <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
           <li class="breadcrumb-item active"> Browse Listings</li>
@@ -43,7 +43,7 @@
         <!-- <h2 class="text-center">About RealEstate</h2> -->
         {% if listings %}
           	{% for listing in listings %}
-            <a href="{% url 'listing' listing.id %}" style="">
+            <a href="{% url 'listing' car.id %}" style="">
 
               <div class="col-md-6 col-lg-4 mb-4 index" id="featured_listings_cards">
                 <div class="card listing-preview">
@@ -76,7 +76,7 @@
                           <div class="card_icon">
                             <i class="fa fa-th-large"></i>
                           </div>
-                          Sqft: {{ listing.model }}
+                          Model: {{ listing.model }}
                         </div>
                         <div class="col-6 icon">
                           <div class="card_icon">
@@ -84,7 +84,7 @@
                           </div>
                           <!-- <i class="fa fa-car"></i> -->
                           <!-- <i class="fas fa-car"></i>  -->
-                          Garage: {{ listing.year }}
+                          Year: {{ listing.year }}
                         </div>
                       </div>
                       <div class="row py-2 text-secondary right">
@@ -94,22 +94,22 @@
                             <i class="fa fa-bed"></i>
                           </div>
                           <!-- <i class="fa fa-bed"></i> -->
-                           Bedrooms: {{ listing.seats }}</div>
+                           seats: {{ listing.seats }}</div>
                         <div class="col-6 icon">
                           <!-- <i class="fas fa-bath"> -->
                           <div class="card_icon">
                             <i class="fa fa-bath"></i>
                           </div>
                           <!-- <i class="fa fa-bath">  -->
-                          Bathrooms: {{ listing.doors }}</div>
+                          Engine: {{ listing.doors }}</div>
                       </div>
                     </div>
                     <hr class="hr listing">
                     <div class="realtor_date">
                       <div class="row py-2 text-secondary realtor_d">
                         <div class="col-6">
-                                <img class="card-realtor" src="{{ listing.realtor.photo.url }}" alt=""></i> 
-                                <a class="listing-realtor">{{ listing.realtor }}</a>
+                                <img class="card-realtor" src="{{ listing.dealer.photo.url }}" alt=""></i> 
+                                <a class="listing-realtor">{{ listing.dealer }}</a>
                               </div>
                       </div>
                       <div class="row text-secondary pb-2 r_date">

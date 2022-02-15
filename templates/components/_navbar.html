@@ -21,7 +21,7 @@
               class="nav-item mr-3"
             {% endif %}
           >
-            {% comment %} <a class="nav-link" href="{% url 'index' %}">Home</a> {% endcomment %}
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
           </li>
           <li
             {% if 'about' in request.path %}
@@ -30,7 +30,7 @@
               class="nav-item mr-3"
             {% endif %}
           >
-            {% comment %} <a class="nav-link" href="{% url 'about' %}">About</a> {% endcomment %}
+            <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
           <li
             {% if 'listings' in request.path %}
@@ -39,7 +39,7 @@
               class="nav-item mr-3"
             {% endif %}
           >
-            {% comment %} <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a> {% endcomment %}
+            <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
           </li>
         </ul>
 
@@ -62,8 +62,8 @@
               class="nav-item mr-3"
             {% endif %}
             >
-              {% comment %} <a class="nav-link" href="{% url 'contact/dashboard' %}">Welcome {{ user.username }} (Dashboard)</a>
-              <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a> {% endcomment %}
+               <a class="nav-link" href="{% url 'dashboard' %}">Welcome {{ user.username }} (Dashboard)</a>
+              <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a> 
             </li>
 
 

@@ -199,10 +199,10 @@
         </div>
         <div class="col-md-3">
           <div class="card mb-3">
-            <img class="card-img-top" src="{{ listing.realtor.photo.url }}" alt="">
+            <img class="card-img-top" src="{{ listing.dealer.photo.url }}" alt="">
             <div class="card-body">
-              <h5 class="card-title">Property Realtor</h5>
-              <h6 class="text-secondary">{{ listing.realtor }}</h6>
+              <h5 class="card-title">Car Dealer</h5>
+              <h6 class="text-secondary">{{ listing.dealer }}</h6>
             </div>
           </div>
           <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Make An Inquiry</button>
@@ -232,7 +232,7 @@
             <input type="hidden" name="realtor_email" value="{{ listing.realtor.email }}">
             <input type="hidden" name="listing_id" value="{{ listing.id }}">
             <div class="form-group">
-              <label for="property_name" class="col-form-label">Property:</label>
+              <label for="property_name" class="col-form-label">Car:</label>
               <input type="text" name="listing" class="form-control" value="{{ listing.title }}">
             </div>
             <div class="form-group">

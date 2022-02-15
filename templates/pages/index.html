@@ -46,9 +46,9 @@
 											</select>
  -->										</div>
 										<div class="col-md-6search mb-3">
-											<label class="sr-only">Bedrooms</label>
+											<label class="sr-only">Make</label>
 											<select name="bedrooms" class="form-control">
-												<option selected="true" disabled="disabled">Bedrooms (All)</option>
+												<option selected="true" disabled="disabled">makes (All)</option>
 												{% comment %} {% for key,value in bedroom_choices.items %}
 													<option value="{{ key }}">{{ value }}</option>
 												{% endfor %} {% endcomment %}
@@ -84,7 +84,7 @@
 		</div>
 	</section>
 	<!-- Alerts -->
-	{% include 'partials/_alerts.html' %}
+	{% include 'components/_alerts.html' %}
 
 		<section id="services" class="py-5 bg-secondary text-white">
 		<div class="container">
@@ -133,7 +133,7 @@
 					{% if listings %}
 						{% for listing in listings %}
 							<!-- Listing 1 -->
-							<a href="{% url 'listing' car.id %}" style="">
+							{% comment %} <a href="{% url 'listing' car.id %}" style=""> {% endcomment %}
 
 							<div class="col-md-6 col-lg-4 mb-4 index">
 								<div class="card listing-preview">

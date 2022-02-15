@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from cars.models import Cars
-from dealers.models import Dealer
+from dealers.models import Dealers
 
 def index(request):
     listings = Cars.objects.order_by('date_added').filter(is_published=True)[:3]
@@ -15,10 +15,10 @@ def index(request):
 
 def about(request):
     # Get all realtors
-    dealers = Dealer.objects.order_by('-hire_date')
+    dealers = Dealers.objects.order_by('-deal_date')
 
     # Get MVP
-    mvp_dealers = Dealer.objects.all().filter(is_mvp=True)
+    mvp_dealers = Dealers.objects.all().filter(is_mvp=True)
 
     context = {
         'dealers': dealers,
