@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">{{ listing.make }}</h1>
+          <h1 class="display-4">{{ listing.make }} {{ listing.model }}</h1>
           <p class="lead">
             <!-- <i class="fas fa-map-marker"></i> -->
             <i class="fa fa-map-marker"></i>
@@ -109,53 +109,53 @@
                   <!-- <i class="fas fa-money-bill-alt"></i> -->
                   <i class="fa fa-money-bill"></i>
                   Asking Price:
-                  <span class="float-right">${{ listing.price }}</span>
+                  <span class="float-right">KSH{{ listing.price }}</span>
                 </li>
-                {% comment %} <li class="list-group-item1 text-secondary">
+                 <li class="list-group-item1 text-secondary">
                   <!-- <i class="fas fa-bed"></i> -->
                   <i class="fa fa-bed"></i>
-                  Bedrooms:
-                  <span class="float-right">{{ listing.bedrooms }}</span>
+                  Make:
+                  <span class="float-right">{{ listing.make }}</span>
                 </li>
                 <li class="list-group-item1 text-secondary">
                   <!-- <i class="fas fa-bath"></i> -->
                   <i class="fa fa-bath"></i>
-                  Bathrooms:
-                  <span class="float-right">{{ listing.bathrooms }}</span>
+                  Model:
+                  <span class="float-right">{{ listing.model }}</span>
                 </li>
                 <li class="list-group-item1 text-secondary">
                   <!-- <i class="fas fa-car"></i> -->
                   <i class="fa fa-car"></i>
-                  Garage:
-                  <span class="float-right">{{ listing.garage }}
+                  Engine:
+                  <span class="float-right">{{ listing.engine }}
                   </span>
                 </li>
                 <li class="list-group-item1 text-secondary">
                   <i class="fas fa-th-large"></i>
                   <!-- <i class="fa fa-th-large"></i> -->
-                  Square Feet:
-                  <span class="float-right">{{ listing.sqft }}</span>
+                  Transmission:
+                  <span class="float-right">{{ listing.transmission }}</span>
                 </li>
                 <li class="list-group-item1 text-secondary">
                   <i class="fas fa-square"></i>
                   <!-- <i class="fa fa-square"></i> -->
-                  Lot Size:
-                  <span class="float-right">{{ listing.lot_size }} Acres
+                  Year:
+                  <span class="float-right">{{ listing.year }} 
                   </span>
                 </li>
                 <li class="list-group-item1 text-secondary">
                   <!-- <i class="fas fa-calendar"></i> -->
                   <i class="fa fa-calendar"></i>
                   Listing Date:
-                  <span class="float-right">{{ listing.list_date }}</span>
+                  <span class="float-right">{{ listing.date_added }}</span>
                 </li>
                 <li class="list-group-item1 text-secondary">
                   <!-- <i class="fas fa-bed"></i> -->
                   <i class="fas fa-award mb-3d"></i>
-                  Realtor:
-                  <span class="float-right">{{ listing.realtor }}
+                  Dealer:
+                  <span class="float-right">{{ listing.owner }}
                   </span>
-                </li> {% endcomment %}
+                </li> 
               </ul>
             </div>
 
@@ -199,10 +199,10 @@
         </div>
         <div class="col-md-3">
           <div class="card mb-3">
-            <img class="card-img-top" src="{{ listing.dealer.photo.url }}" alt="">
+            <img class="card-img-top" src="{{ listing.owner.photo.url }}" alt="">
             <div class="card-body">
               <h5 class="card-title">Car Dealer</h5>
-              <h6 class="text-secondary">{{ listing.dealer }}</h6>
+              <h6 class="text-secondary">{{ listing.owner }}</h6>
             </div>
           </div>
           <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Make An Inquiry</button>
