@@ -28,7 +28,7 @@ body{
 
 .navbar.navbar-expand-lg.navbar-dark.bg-primary.sticky-top{
 	/*box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.9);*/
-	background-color: #262f35;
+	background-color: #334552;
 }
 
 .btn-secondary {
@@ -52,20 +52,9 @@ img {
 	margin-right: 0.4rem; }
 
 #showcase {
-	/*background: url(../img/showcase.jpg) no-repeat top center;*/
-	/*background: linear-gradient( #0c0d0e, rgba(0, 0, 0, 0.5) ), url(../img/one/car1.jpeg) fixed;*/
-	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/one/car1.jpeg) fixed;
-	/*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/one/car1.jpeg) fixed;*/
-	/*background: url(../img/one/car1.jpeg) fixed;*/
-	/*background-color: #0c0d0e;*/
-	/*background: url(../img/one/car1.jpeg) fixed;*/
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/one/car3.jpeg) fixed;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	/*background: rgba(51, 51, 51, 0.8); */
-	/*opacity: .5;*/
-
-	/*background-color: red;*/
-	/*background: url(../img/showcase.jpg) no-repeat top center fixed/cover;*/
 	position: relative;
 	min-height: 650px;
 	color: #fff;
@@ -90,11 +79,6 @@ img {
 
 
 		background: rgba(51, 51, 51, 0.8); 
-		/*background-color: rgba(255,255,255,0.9);*/
-		/*background-color: white;*/
-
-		/*background-color: #0c0d0e;*/
-		/*border: 1px solid #ddb624;*/
 	}
 
 
@@ -108,21 +92,6 @@ img {
 #services {
 	color: black;
 	border-bottom: 1px solid #e5e5e5;
-	/*padding-top: 0px !important;*/
-	/*background: url(../img/building.jpg) no-repeat top center fixed/cover;*/
-	/*background: url(../img/building.jpg) no-repeat top center fixed;*/
-	
-	/*background: url(../img/two/two6.jpg) fixed;	
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-*/
-	/*background: url(../img/two/two6.jpg) no-repeat center fixed;*/
-	/*background: linear-gradient( #0c0d0e, rgba(0, 0, 0, 0.5) ), url(../img/two/two6.jpg) fixed;*/
-	
-
-	/*background: linear-gradient(rgba(0, 0, 0, 0.5), #0c0d0e ), url(../img/two/two6.jpg) no-repeat center fixed;*/
-	/*background: linear-gradient(rgba(0, 0, 0, 0.5), #0c0d0e ), url(../img/two/two6.jpg) no-repeat center;*/
-	/*background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(../img/two/two6.jpg) no-repeat center;*/
 
 
 	min-height: 300px;
@@ -149,7 +118,7 @@ img {
 
 	/*background: url(../img/two/two6.jpg) no-repeat center fixed;*/
 	/*background: linear-gradient( #0c0d0e, rgba(0, 0, 0, 0.5) ), url(../img/two/two6.jpg) no-repeat center fixed;*/
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/two/two6.jpg) no-repeat center fixed;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/one/car3.jpeg) no-repeat center fixed;
 	
 	position: relative;
 	overflow: hidden;
@@ -171,17 +140,7 @@ img {
 
 
 #showcase_search_top {
-	/*background: url(../img/building.jpg) no-repeat top center fixed/cover;*/
-	/*background: url(../img/building.jpg) no-repeat top center fixed;*/
-
-	/*background: url(../img/two/two6.jpg) top fixed;	
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-*/
-
-	/*background: url(../img/two/two6.jpg) no-repeat center fixed;*/
-	/*background: linear-gradient( #0c0d0e, rgba(0, 0, 0, 0.5) ), url(../img/two/two6.jpg) no-repeat center fixed;*/
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/two/two6.jpg) no-repeat center fixed;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/one/car3.jpeg) no-repeat center fixed;
 	
 	position: relative;
 	overflow: hidden;

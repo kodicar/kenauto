@@ -1,4 +1,5 @@
 from django.db import models
+from dealers.models import Dealers
 
 # Create your models here.
 
@@ -168,7 +169,7 @@ class Cars(models.Model):
     photo_6 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     is_published = models.BooleanField(default=True)
     date_added = models.DateTimeField(auto_now=True)
-    # owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Dealers, on_delete=models.CASCADE)
 
 
     def __str__(self):

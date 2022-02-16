@@ -13,3 +13,6 @@ class Dealers(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    class Meta:
+        verbose_name_plural = 'Dealers'
