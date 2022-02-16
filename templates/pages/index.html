@@ -133,7 +133,7 @@
 					{% if listings %}
 						{% for listing in listings %}
 							<!-- Listing 1 -->
-							{% comment %} <a href="{% url 'listing' car.id %}" style=""> {% endcomment %}
+							<a href="{% url 'listing' listing.id %}" style="">
 
 							<div class="col-md-6 col-lg-4 mb-4 index">
 								<div class="card listing-preview">
@@ -166,7 +166,7 @@
 													<div class="card_icon">
 														<i class="fa fa-th-large"></i>
 													</div>
-													Sqft: {{ listing.seats }}
+													seats: {{ listing.seats }}
 												</div>
 												<div class="col-6 icon">
 													<div class="card_icon">
@@ -174,7 +174,7 @@
 													</div>
 													<!-- <i class="fa fa-car"></i> -->
 													<!-- <i class="fas fa-car"></i>  -->
-													Garage: {{ listing.doors }}
+													Engine: {{ listing.engine }}
 												</div>
 											</div>
 											<div class="row py-2 text-secondary right">
@@ -184,22 +184,22 @@
 														<i class="fa fa-bed"></i>
 													</div>
 													<!-- <i class="fa fa-bed"></i> -->
-													 Bedrooms: {{ listing.engine }}</div>
+													 Doors: {{ listing.doors}}</div>
 												<div class="col-6 icon">
 													<!-- <i class="fas fa-bath"> -->
 													<div class="card_icon">
 														<i class="fa fa-bath"></i>
 													</div>
 													<!-- <i class="fa fa-bath">	 -->
-													Bathrooms: {{ listing.model }}</div>
+													Model: {{ listing.model }}</div>
 											</div>
 										</div>
 										<hr class="hr listing">
 										<div class="realtor_date">
 											<div class="row py-2 text-secondary realtor_d">
 												<div class="col-6">
-		            								<img class="card-realtor" src="{{ listing.realtor.photo.url }}" alt=""></i> 
-		            								<a class="listing-realtor">{{ listing.realtor }}</a>
+		            								<img class="card-realtor" src="{{ listing.owner.photo.url }}" alt=""></i> 
+		            								<a class="listing-realtor">{{ listing.owner }}</a>
 		            							</div>
 											</div>
 											<div class="row text-secondary pb-2 r_date">
@@ -224,13 +224,5 @@
 			</div>
 		</div>
 	</section>
-	
-	<!-- <section id="work" class="bg-dark text-white text-center">
-		<h2 class="display-4">We Work For You</h2>
-		<h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
-		<hr>
-		<a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
-	</section>
- -->
 
 {% endblock %}

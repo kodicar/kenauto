@@ -43,7 +43,7 @@
         <!-- <h2 class="text-center">About RealEstate</h2> -->
         {% if listings %}
           	{% for listing in listings %}
-            <a href="{% url 'listing' car.id %}" style="">
+            <a href="{% url 'listing' listing.id %}" style="">
 
               <div class="col-md-6 col-lg-4 mb-4 index" id="featured_listings_cards">
                 <div class="card listing-preview">
@@ -101,15 +101,15 @@
                             <i class="fa fa-bath"></i>
                           </div>
                           <!-- <i class="fa fa-bath">  -->
-                          Engine: {{ listing.doors }}</div>
+                          Engine: {{ listing.engine }}</div>
                       </div>
                     </div>
                     <hr class="hr listing">
                     <div class="realtor_date">
                       <div class="row py-2 text-secondary realtor_d">
                         <div class="col-6">
-                                <img class="card-realtor" src="{{ listing.dealer.photo.url }}" alt=""></i> 
-                                <a class="listing-realtor">{{ listing.dealer }}</a>
+                                <img class="card-realtor" src="{{ listing.owner.photo.url }}" alt=""></i> 
+                                <a class="listing-realtor">{{ listing.owner }}</a>
                               </div>
                       </div>
                       <div class="row text-secondary pb-2 r_date">
@@ -123,66 +123,6 @@
                 </div>
               </div>
             </a>
-          	
-            <!-- <a href="{% url 'listing' listing.id %}" style="">
-
-				<div class="col-md-6 col-lg-4 mb-4">
-					<div class="card listing-preview">
-							<img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
-						<div class="card-img-overlay">
-							<h2>
-								<span class="badge badge-secondary text-white">${{ listing.price}}</span>
-							</h2>
-						</div>
-						<div class="card-body">
-							<div class="listing-heading text-center">
-								<a class="text-primary">{{ listing.title }}</a>
-								<a>
-									<i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}
-								</a>
-							</div>
-							<div class="rows1">
-								<div class="row py-2 text-secondary left">
-									<div class="col-6">
-										<i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
-									<div class="col-6">
-										<i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
-								</div>
-								<div class="row py-2 text-secondary right">
-									<div class="col-6">
-										<i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
-									<div class="col-6">
-										<i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
-								</div>
-							</div>
-							<hr>
-							<div class="row py-2 text-secondary">
-								<div class="col-6">
-    								<img class="card-realtor" src="{{ listing.realtor.photo.url }}" alt=""></i> 
-    								<a class="listing-realtor">{{ listing.realtor }}</a>
-    							</div>
-							</div>
-							<div class="row text-secondary pb-2">
-								<div class="col-6">
-									<i class="fas fa-clock"></i>
-									<a class="listing-time-ago">{{ listing.list_date | timesince }} ago</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</a> -->
-
-
-
-
-
-
-
-
-
-
-
           {% endfor %}
         {% else %}
           <div class="col-md-12">
