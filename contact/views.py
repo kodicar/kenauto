@@ -8,8 +8,8 @@ from . models import Contact
 
 def contact(request):
   if request.method == 'POST':
-    car_id = request.POST['car_id']
-    car = request.POST['car']
+    listing_id = request.POST['listing_id']
+    listing = request.POST['listing']
     name = request.POST['name']
     email = request.POST['email']
     phone = request.POST['phone']
@@ -20,12 +20,12 @@ def contact(request):
     #  Check if user has made inquiry already
     if request.user.is_authenticated:
       user_id = request.user.id
-      has_contacted = Contact.objects.all().filter(car_id=car_id, user_id=user_id)
+      has_contacted = Contact.objects.all().filter(listing_id=listing_id, user_id=user_id)
       if has_contacted:
         messages.error(request, 'You have already made an inquiry for this listing')
-        return redirect('/listings/'+car_id)
+        return redirect('/cars/'+listing_id)
 
-    contact = Contact(listing=car, listing_id=car_id, name=name, email=email, phone=phone, message=message, user_id=user_id )
+    contact = Contact(listing=listing, listing_id=listing_id, name=name, email=email, phone=phone, message=message, user_id=user_id )
 
     contact.save()
 
@@ -39,4 +39,4 @@ def contact(request):
     # )
 
     messages.success(request, 'Your request has been submitted, a dealer will get back to you soon')
-    return redirect('/listings/'+car_id)
+    return redirect('/cars/'+listing_id)

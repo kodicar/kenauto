@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Contact(models.Model):
-    car = models.CharField(max_length=200)
-    car_id = models.IntegerField()
+    listing = models.CharField(max_length=200)
+    listing_id = models.IntegerField()
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=100)
     phone = models.CharField(max_length=100)
