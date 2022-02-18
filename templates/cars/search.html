@@ -48,15 +48,15 @@
 
                     </div>
                     <div class="col-md-6search mb-3">
-                      <label class="sr-only">Bedrooms</label>
+                      <label class="sr-only">Makes</label>
                       <select name="bedrooms" class="form-control">
-                        <option selected="true" disabled="disabled">Bedrooms (All)</option>
+                        <option selected="true" disabled="disabled">Makes (All)</option>
                         <!-- {% for key,value in bedroom_choices.items %}
                           <option value="{{ key }}">{{ value }}</option>
                         {% endfor %} -->
-                        {% for key,value in bedroom_choices.items %}
+                        {% for key,value in makes_choices.items %}
                       <option value="{{ key }}"
-                      {% if key == values.bedrooms %}
+                      {% if key == values.makes %}
                         selected
                       {% endif %}
                       >{{ value }}</option>
@@ -110,7 +110,7 @@
               <i class="fas fa-home"></i> Home</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="{% url 'listings' %}">Browse Listings</a>
+            <a href="{% url 'listings' %}">Browse Cars</a>
           </li>
           <li class="breadcrumb-item active"> Search Results</li>
         </ol>
@@ -124,55 +124,6 @@
       <div class="row">
         {% if listings %}
           {% for listing in listings %}
-          <!-- <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card listing-preview">
-                <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
-                <div class="card-img-overlay">
-                  <h2>
-                    <span class="badge badge-secondary text-white">${{ listing.price | intcomma }}</span>
-                  </h2>
-                </div>
-                <div class="card-body">
-                  <div class="listing-heading text-center">
-                    <h4 class="text-primary">{{ listing.title }}</h4>
-                    <p>
-                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}</p>
-                  </div>
-                  <hr>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
-                    <div class="col-6">
-                      <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
-                  </div>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
-                    <div class="col-6">
-                      <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
-                  </div>
-                  <hr>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-12">
-                      <i class="fas fa-user"></i> {{ listing.realtor }}</div>
-                  </div>
-                  <div class="row text-secondary pb-2">
-                    <div class="col-6">
-                      <i class="fas fa-clock"></i> {{ listing.list_date | timesince }}</div>
-                  </div>
-                  <hr>
-                  <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
-                </div>
-              </div>
-            </div>
-
- -->
-
-
-
-
-
-
             <a href="{% url 'listing' listing.id %}" style="">
 
               <div class="col-md-6 col-lg-4 mb-4 index" id="featured_listings_cards">
@@ -188,14 +139,14 @@
                   </div>
                   <div class="card-body">
                     <div class="listing-heading text-center_1">
-                      <a class="text-primary property-title">{{ listing.title }}</a>
+                      <a class="text-primary property-title">{{ listing.make }} {{ listing.model }}</a>
                     </div>
                     <!-- <div class="listing-heading text-center_1"> -->
                     <div class="listing_location text-center_1">
                       <a class="property-location">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <!-- <i class="fas fa-map-marker text-secondary"></i>  -->
-                        {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}
+                        {{ listing.county }} {{ listing.town }}, {{ listing.streetaddress}}
                       </a>
                     </div>
                     <!-- <hr class="hr"> -->
@@ -206,7 +157,7 @@
                           <div class="card_icon">
                             <i class="fa fa-th-large"></i>
                           </div>
-                          Sqft: {{ listing.sqft }}
+                          seats: {{ listing.seats }}
                         </div>
                         <div class="col-6 icon">
                           <div class="card_icon">
@@ -214,7 +165,7 @@
                           </div>
                           <!-- <i class="fa fa-car"></i> -->
                           <!-- <i class="fas fa-car"></i>  -->
-                          Garage: {{ listing.garage }}
+                          Engine: {{ listing.engine}}
                         </div>
                       </div>
                       <div class="row py-2 text-secondary right">
@@ -224,22 +175,22 @@
                             <i class="fa fa-bed"></i>
                           </div>
                           <!-- <i class="fa fa-bed"></i> -->
-                           Bedrooms: {{ listing.bedrooms }}</div>
+                           Doors: {{ listing.doors }}</div>
                         <div class="col-6 icon">
                           <!-- <i class="fas fa-bath"> -->
                           <div class="card_icon">
                             <i class="fa fa-bath"></i>
                           </div>
                           <!-- <i class="fa fa-bath">  -->
-                          Bathrooms: {{ listing.bathrooms }}</div>
+                          model: {{ listing.model}}</div>
                       </div>
                     </div>
                     <hr class="hr listing">
                     <div class="realtor_date">
                       <div class="row py-2 text-secondary realtor_d">
                         <div class="col-6">
-                                <img class="card-realtor" src="{{ listing.realtor.photo.url }}" alt=""></i> 
-                                <a class="listing-realtor">{{ listing.realtor }}</a>
+                                <img class="card-realtor" src="{{ listing.owner.photo.url }}" alt=""></i> 
+                                <a class="listing-realtor">{{ listing.owner }}</a>
                               </div>
                       </div>
                       <div class="row text-secondary pb-2 r_date">

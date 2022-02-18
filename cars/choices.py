@@ -64,3 +64,23 @@ price_choices = {
   '2000000':'KSH2,000,000',
   '30000000':'KSH3M+',
 }
+
+makes_choices = (
+        ('Tesla', 'Tesla'),
+        ('Lamborghini', 'Lamborghini'),
+        ('Jeep', 'Jeep'),
+        ('Rolls Royce', 'Rolls Royce'),
+        ('Mercedes Benz', 'Mercedes Benz'),
+        ('Ferrari', 'Ferrari'),
+        ('Maserati', 'Maserati'),
+        ('Porsche', 'Porsche'),
+        ('BMW', 'Subaru'),
+        ('Acura', 'Acura'),
+        ('Dodge', 'Dodge'),
+        ('Toyota', 'Toyota'),
+        ('Hyundai', 'Hyundai'),
+        ('Apple', 'Apple'),
+        ('Subaru', 'Subaru'),
+        ('Bugatti', 'Bugatti'),
+
+    )
