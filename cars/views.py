@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from . models import Cars
-from .choices import counties, price_choices
+from .choices import counties, price_choices, makes_choices
 
 # Create your views here.
 def index(request):
@@ -25,3 +25,47 @@ def listing(request, listing_id):
   }
 
   return render(request, 'cars/listing.html', context)
+
+def search(request):
+  queryset_list = Cars.objects.order_by('-date_added')
+
+  # Keywords
+  if 'keywords' in request.GET:
+    keywords = request.GET['keywords']
+    if keywords:
+      queryset_list = queryset_list.filter(description__icontains=keywords)
+
+  # County
+  if 'county' in request.GET:
+    county = request.GET['county']
+    if county:
+      queryset_list = queryset_list.filter(county__iexact=county)
+
+  # Town
+  if 'town' in request.GET:
+    town = request.GET['town']
+    if town:
+      queryset_list = queryset_list.filter(town__iexact=town)
+
+  # Makes
+  if 'makes' in request.GET:
+    makes = request.GET['makes']
+    if makes:
+      queryset_list = queryset_list.filter(makes__lte=makes)
+
+  # Price
+  if 'price' in request.GET:
+    price = request.GET['price']
+    if price:
+      queryset_list = queryset_list.filter(price__lte=price)
+
+  context = {
+    'county_choices': counties,
+    'makes_choices': makes_choices,
+    'price_choices': price_choices,
+    'listings': queryset_list,
+    'values': request.GET
+  }
+
+  return render(request, 'cars/search.html', context)
+

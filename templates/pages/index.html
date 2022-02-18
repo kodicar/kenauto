@@ -16,7 +16,7 @@
 				<div class="overlay search_container">
 
 					<div class="search">
-						{% comment %} <form action="{% url 'search' %}"> {% endcomment %}
+						<form action="{% url 'search' %}">
 							<div class="form-content">
 								<div class="form-search">
 								<!-- Form Row 1 -->
@@ -28,7 +28,7 @@
 
 										<div class="col-md-4search mb-3">
 											<label class="sr-only">County</label>
-											<input type="text" name="city" class="form-control" placeholder="City">
+											<input type="text" name="county" class="form-control" placeholder="county">
 										</div>
 
 										
@@ -37,7 +37,7 @@
 									<div class="form-row">
 										<div class="col-md-6search mb-3">
 											<label class="sr-only">Town</label>
-											<input type="text" name="state" class="form-control" placeholder="State">
+											<input type="text" name="town" class="form-control" placeholder="town">
 											<!-- <select name="state" class="form-control">
 												<option selected="true" disabled="disabled">State (All)</option>
 												{% for key,value in state_choices.items %}
@@ -49,17 +49,17 @@
 											<label class="sr-only">Make</label>
 											<select name="bedrooms" class="form-control">
 												<option selected="true" disabled="disabled">makes (All)</option>
-												{% comment %} {% for key,value in bedroom_choices.items %}
+												 {% for key,value in makes_choices.items %}
 													<option value="{{ key }}">{{ value }}</option>
-												{% endfor %} {% endcomment %}
+												{% endfor %} 
 											</select>
 										</div>
 										<div class="col-md-6search mb-3">
 											<select name="price" class="form-control" id="type">
 												<option selected="true" disabled="disabled">Max Price (Any)</option>
-												{% comment %} {% for key,value in price_choices.items %}
+												 {% for key,value in price_choices.items %}
 													<option value="{{ key }}">{{ value }}</option>
-												{% endfor %} {% endcomment %}
+												{% endfor %}
 											</select>
 										</div>
 								<!-- 		<div class="form-search-button">
@@ -94,9 +94,6 @@
 			</h3>
 			<div class="row text-center">
 				<div class="col-md-4 products">
-					<!-- <i class="fas fa-comment fa-4x mr-4"></i> -->
-
-					<!-- <img src="../../realestate/static/img/house/rent_house.png"> -->
 					<img class="re_products image" src="{% static 'img/house/buy_house.png' %}">
 					<!-- <hr> -->
 					<h3 class="index_bottom_title">Buy a car</h3>
@@ -216,7 +213,7 @@
 						{% endfor %}
 					{% else %}
 						<div class="col-md-12">
-							<p>No Listings Available</p>
+							<p>No Cars Available</p>
 						</div>
 					{% endif %}
 
