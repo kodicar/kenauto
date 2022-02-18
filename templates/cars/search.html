@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-{% load humanize %}
 
 {% block title %} | Search Results {% endblock %}
 
@@ -134,7 +133,7 @@
                   <!-- </a> -->
                   <div class="card-img-overlay">
                     <!-- <h2> -->
-                      <span class="badge badge-secondary text-white">${{ listing.price | intcomma }}</span>
+                      <span class="badge badge-secondary text-white">KSH{{ listing.price }}</span>
                     <!-- </h2> -->
                   </div>
                   <div class="card-body">
@@ -209,7 +208,7 @@
           {% endfor %}
         {% else %}
           <div class="col-md-12">
-            <p>No Listings Available</p>
+            <p>No Cars Available</p>
           </div>
         {% endif %}
       </div>
