@@ -22,7 +22,7 @@ def contact(request):
       user_id = request.user.id
       has_contacted = Contact.objects.all().filter(listing_id=listing_id, user_id=user_id)
       if has_contacted:
-        messages.error(request, 'You have already made an inquiry for this listing')
+        messages.error(request, 'You have already made an inquiry for this Car')
         return redirect('/cars/'+listing_id)
 
     contact = Contact(listing=listing, listing_id=listing_id, name=name, email=email, phone=phone, message=message, user_id=user_id )
