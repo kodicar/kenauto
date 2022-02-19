@@ -11,7 +11,7 @@ def index(request):
         'listings': listings,
         'county_choices': counties,
         'makes_choices': makes_choices,
-        'price_choices': price_choices
+        'price_choices': price_choices,
     }
 
     return render(request, 'pages/index.html', context)
