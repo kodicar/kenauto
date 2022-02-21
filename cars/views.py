@@ -48,10 +48,15 @@ def search(request):
       queryset_list = queryset_list.filter(town__iexact=town)
 
   # Makes
-  if 'makes' in request.GET:
-    makes = request.GET['makes']
-    if makes:
-      queryset_list = queryset_list.filter(makes__lte=makes)
+  if 'make' in request.GET:
+    make = request.GET['make']
+    if make:
+      queryset_list = queryset_list.filter(makes__lte=make)
+
+  if 'model' in request.GET:
+    model = request.GET['model']
+    if model:
+      queryset_list = queryset_list.filter(model__lte=model)
 
   # Price
   if 'price' in request.GET:

@@ -29,7 +29,7 @@
 
                     <div class="col-md-4search mb-3">
                       <select name="counties" class="form-control">
-												<option selected="true" disabled="disabled">Counties</option>
+												<option selected="true" disabled="disabled">County</option>
 												 {% for key,value in county_choices.items %}
 													<option value="{{ key }}">{{ value }}</option>
 												{% endfor %} 
@@ -50,7 +50,7 @@
 
                     </div>
                     <div class="col-md-6search mb-3">
-                      <label class="sr-only">Makes</label>
+                      <label class="sr-only">Make</label>
                       <select name="bedrooms" class="form-control">
                         <option selected="true" disabled="disabled">Makes (All)</option>
                         {% for key,value in makes_choices.items %}
@@ -59,8 +59,13 @@
                         selected
                       {% endif %}
                       >{{ value }}</option>
-                    {% endfor %}
+                      {% endfor %}
                       </select>
+                    </div>
+                    <div class="col-md-6search mb-3">
+                      <label class="sr-only">Model</label>
+                      <input type="text" name="model" class="form-control" placeholder="model" value="{{ values.model }}">
+
                     </div>
                     <div class="col-md-6search mb-3">
                       <select name="price" class="form-control" id="type">

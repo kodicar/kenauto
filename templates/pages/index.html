@@ -11,7 +11,6 @@
 								<h1 class="display-4 mb-4">
 						Find your perfect car today
 					</h1>
-					<p class="lead">Search the perfect car</p>
 			<div class="home-search p-5">
 				<div class="overlay search_container">
 
@@ -26,11 +25,9 @@
 											<input type="text" name="keywords" class="form-control" placeholder="Keywords (transmission, four wheel drive, engine)">
 										</div>
 
-										<div class="col-md-4search mb-3">
-											{% comment %} <label class="sr-only">County</label> {% endcomment %}
-											{% comment %} <input type="text" name="county" class="form-control" placeholder="county"> {% endcomment %}
+										<div class="col-md-6search mb-3">
 											<select name="counties" class="form-control">
-												<option selected="true" disabled="disabled">Counties</option>
+												<option selected="true" disabled="disabled">County</option>
 												 {% for key,value in county_choices.items %}
 													<option value="{{ key }}">{{ value }}</option>
 												{% endfor %} 
@@ -44,27 +41,31 @@
 										<div class="col-md-6search mb-3">
 											<label class="sr-only">Town</label>
 											<input type="text" name="town" class="form-control" placeholder="town">
-											<!-- <select name="state" class="form-control">
-												<option selected="true" disabled="disabled">State (All)</option>
-												{% for key,value in state_choices.items %}
-													<option value="{{ key }}">{{ value }}</option>
-												{% endfor %}
-											</select>
+			
  -->										</div>
 										<div class="col-md-6search mb-3">
 											<label class="sr-only">Makes</label>
 											<select name="bedrooms" class="form-control">
 												<option selected="true" disabled="disabled">makes (All)</option>
 												 {% for key,value in makes_choices.items %}
-													<option value="{{ key }}">{{ value }}</option>
+													<option value="{{ key }}" {% if key == values.makes %}
+													selected
+												  {% endif %}>{{ value }}</option>
 												{% endfor %} 
 											</select>
 										</div>
 										<div class="col-md-6search mb-3">
+											<label class="sr-only">Model</label>
+											<input type="text" name="model" class="form-control" placeholder="model" value="{{ values.model }}">
+					  
+										  </div>
+										<div class="col-md-6search mb-3">
 											<select name="price" class="form-control" id="type">
 												<option selected="true" disabled="disabled">Max Price (Any)</option>
 												 {% for key,value in price_choices.items %}
-													<option value="{{ key }}">{{ value }}</option>
+													<option value="{{ key }}" {% if key == values.price %}
+													selected
+												  {% endif %}>{{ value }}</option>
 												{% endfor %}
 											</select>
 										</div>
