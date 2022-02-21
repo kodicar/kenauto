@@ -30,10 +30,10 @@ def search(request):
   queryset_list = Cars.objects.order_by('-date_added')
 
   # Keywords
-  if 'keywords' in request.GET:
-    keywords = request.GET['keywords']
-    if keywords:
-      queryset_list = queryset_list.filter(description__icontains=keywords)
+  # if 'keywords' in request.GET:
+  #   keywords = request.GET['keywords']
+  #   if keywords:
+  #     queryset_list = queryset_list.filter(description__icontains=keywords)
 
   # County
   if 'county' in request.GET:
