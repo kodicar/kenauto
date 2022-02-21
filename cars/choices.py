@@ -84,3 +84,15 @@ makes_choices = {
     'Bugatti': 'Bugatti',
 
 }
+
+categories = {
+        'Car': 'Car',
+        'classics': 'classics',
+        'convertibles': 'convertibles',
+        'Exotic & Luxury': 'Exotic & Luxury',
+        'Minivans': 'Minivans',
+        'Sports': 'Sports',
+        'SUV': 'SUV',
+        'Trucks': 'Trucks',
+        'Vans': 'Vans'
+    }
