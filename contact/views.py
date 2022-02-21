@@ -31,10 +31,10 @@ def contact(request):
 
     # Send email
     send_mail(
-      'Property Listing Inquiry',
+      'Car Listing Inquiry',
       'There has been an inquiry for ' + listing + '. Sign into the admin panel for more info',
-      'traversy.brad@gmail.com',
-      [dealer_email, 'techguyinfo@gmail.com'],
+      'kenauto@gmail.com',
+      [dealer_email],
       fail_silently=False
     )
 
