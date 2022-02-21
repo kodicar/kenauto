@@ -135,6 +135,8 @@ class Cars(models.Model):
     colour = models.CharField(max_length=50)
     mpg = models.CharField(max_length=50)
     engine = models.CharField(max_length=50)
+    fuel_type = models.CharField(max_length=50, default='petrol')
+    fuel_capacity = models.IntegerField(default=0)
     seats = models.IntegerField()
     doors = models.IntegerField()
 
