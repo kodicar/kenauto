@@ -25,7 +25,7 @@
             <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> Browse Listings</li>
+          <li class="breadcrumb-item active"> Browse Cars</li>
         </ol>
       </nav>
     </div>
@@ -58,7 +58,7 @@
                   </div>
                   <div class="card-body">
                     <div class="listing-heading text-center_1">
-                      <a class="text-primary property-title">{{ listing.make }}</a>
+                      <a class="text-primary property-title">{{ listing.make }} {{ listing.model }}</a>
                     </div>
                     <!-- <div class="listing-heading text-center_1"> -->
                     <div class="listing_location text-center_1">
