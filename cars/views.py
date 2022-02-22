@@ -51,7 +51,7 @@ def search(request):
   if 'make' in request.GET:
     make = request.GET['make']
     if make:
-      queryset_list = queryset_list.filter(makes__lte=make)
+      queryset_list = queryset_list.filter(make__lte=make)
 
   if 'model' in request.GET:
     model = request.GET['model']
