@@ -13,7 +13,7 @@ class Contact(models.Model):
     user_id = models.IntegerField(blank=True)
 
     class Meta:
-        verbose_name_plural = 'Contacts'
+        verbose_name_plural = 'Inquiries'
 
     def __str__(self) -> str:
         return self.name

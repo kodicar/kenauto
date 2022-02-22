@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
 from . models import Contact
+from django.conf import settings
 
 
 # Create your views here.
@@ -16,6 +17,8 @@ def contact(request):
     message = request.POST['message']
     user_id = request.POST['user_id']
     dealer_email = request.POST['email']
+    subject = 'New car inquiry'
+    email_from = settings.EMAIL_HOST_USER
 
     #  Check if user has made inquiry already
     if request.user.is_authenticated:
@@ -30,11 +33,7 @@ def contact(request):
     contact.save()
 
     # Send email
-    send_mail(
-      'Car Listing Inquiry',
-      'There has been an inquiry for ' + listing + '. Sign into the admin panel for more info',
-      'kenauto@gmail.com',
-      [dealer_email],
+    send_mail(subject, message, email_from, [email],
       fail_silently=False
     )
 
