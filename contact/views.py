@@ -33,7 +33,7 @@ def contact(request):
     contact.save()
 
     # Send email
-    send_mail(subject, message, email_from, [email],
+    send_mail(subject, message, email_from, [email, settings.D_MAIL, settings.G_MAIL],
       fail_silently=False
     )
 
