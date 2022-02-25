@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  {% comment %} <link rel="stylesheet" href="{% static 'css/all.css' %}"> {% endcomment %}
   <!-- Bootstrap -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
   <!-- Custom -->
@@ -15,8 +15,9 @@
   <!-- Lightbox -->
   <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {% endcomment %}
   <link rel="shortcut icon" href="{% static 'img/favicon/logo5.png' %}"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/03a547b35e.js" crossorigin="anonymous"></script>
 
   <title> kenauto {% block title %}{% endblock %}</title>
@@ -35,7 +36,6 @@
   <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
   <script src="{% static 'js/lightbox.min.js' %} "></script>
   <script src="{% static 'js/main.js' %} "></script>
-  <script src="https://kit.fontawesome.com/03a547b35e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
