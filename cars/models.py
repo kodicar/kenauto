@@ -133,7 +133,7 @@ class Cars(models.Model):
     # odometer = models.CharField(max_length=300)
     car_category = models.ForeignKey(Category, on_delete= models.CASCADE)
     colour = models.CharField(max_length=50)
-    mpg = models.CharField(max_length=50)
+    mileage = models.CharField(max_length=50)
     engine = models.CharField(max_length=50)
     fuel_type = models.CharField(max_length=50, default='petrol')
     fuel_capacity = models.IntegerField(default=0)
