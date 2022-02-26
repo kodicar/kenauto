@@ -10,7 +10,7 @@ from django.conf import settings
 def contact(request):
   if request.method == 'POST':
     listing_id = request.POST['listing_id']
-    listing = request.POST['listing']
+    listing = request.POST['car']
     name = request.POST['name']
     email = request.POST['email']
     phone = request.POST['phone']
