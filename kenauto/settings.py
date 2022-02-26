@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-0ww4qxu@h$28*4^67$ioqzq4a5pg3js6kv+igp@7##j!*bs7dr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'kenauto.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'kenauto.herokuapp.com', 'www.kenauto.co.ke']
 
 
 # Application definition
