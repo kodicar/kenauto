@@ -176,3 +176,8 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+   'Expires': 'Sun, 27 Feb 2099 20:00:00 GMT',
+   'Cache-Control': 'max-age=94608000',
+}
