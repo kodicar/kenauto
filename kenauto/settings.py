@@ -181,3 +181,10 @@ AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
    'Expires': 'Sun, 27 Feb 2099 20:00:00 GMT',
    'Cache-Control': 'max-age=94608000',
 }
+
+# redirect to https and set debug to false on prod
+
+if os.getcwd() == '/app':
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
+    DEBUG = False
