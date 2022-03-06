@@ -82,6 +82,8 @@ makes_choices = {
     'Apple': 'Apple',
     'Subaru': 'Subaru',
     'Bugatti': 'Bugatti',
+    'Mazda': 'Mazda',
+    'Suzuki': 'Suzuki',
 
 }
 
