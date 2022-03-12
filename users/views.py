@@ -20,11 +20,11 @@ def register(request):
     if password == password2:
       # Check username
       if User.objects.filter(username=username).exists():
-        messages.error(request, 'That username is taken')
+        messages.error(request, 'That username is already in use')
         return redirect('register')
       else:
         if User.objects.filter(email=email).exists():
-          messages.error(request, 'That email is being used')
+          messages.error(request, 'That email is being is already in use')
           return redirect('register')
         else:
           # Looks good
@@ -34,7 +34,7 @@ def register(request):
           # messages.success(request, 'You are now logged in')
           # return redirect('index')
           user.save()
-          messages.success(request, 'You are now registered and can log in')
+          messages.success(request, 'Registration successful,you can login')
           return redirect('login')
     else:
       messages.error(request, 'Passwords do not match')
