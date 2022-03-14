@@ -37,7 +37,11 @@ class Category(models.Model):
         ('Sports', 'Sports'),
         ('SUV', 'SUV'),
         ('Trucks', 'Trucks'),
-        ('Vans', 'Vans')
+        ('Vans', 'Vans'),
+        ('Sedan', 'Sedan'),
+        ('Coupe', 'Coupe'),
+        ('Station Wagon', 'Station Wagon'),
+        ('Hatchback', 'Hatchback')
     )
     cat_name = models.CharField(max_length=100, choices=categories, default='Car')
     cat_image = models.ImageField(upload_to = 'categories')

@@ -141,6 +141,10 @@ categories = {
     'Sports': 'Sports',
     'SUV': 'SUV',
     'Trucks': 'Trucks',
-    'Vans': 'Vans'
+    'Vans': 'Vans',
+    'Sedan': 'Sedan',
+    'Coupe': 'Coupe',
+    'Station Wagon': 'Station Wagon',
+    'Hatchback': 'Hatchback',
 
 }
