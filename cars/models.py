@@ -106,6 +106,14 @@ class Cars(models.Model):
         ('Hino', 'Hino'),
         ('Scania', 'Scania'),
         ('BYD', 'BYD'),
+        ('Chery', 'Chery'),
+        ('Toyota Century', 'Toyota Century'),
+        ('Toyota Alphard', 'Toyota Alphard'),
+        ('FAW', 'FAW'),
+        ('Daimler', 'Daimler'),
+        ('General Motors', 'General Motors'),
+        ('SAIC', 'SAIC'),
+        ('Geely', 'Geely'),
 
     )
 
