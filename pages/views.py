@@ -4,9 +4,10 @@ from django.http import HttpResponse
 from cars.models import Cars
 from dealers.models import Dealers
 from cars.choices import makes_choices, price_choices, counties
+import random
 
 def index(request):
-    listings = Cars.objects.order_by('date_added').filter(is_published=True)[:3]
+    listings = Cars.objects.order_by('?').filter(is_published=True)[:3]
     context = {
         'listings': listings,
         'county_choices': counties,
