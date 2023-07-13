@@ -88,17 +88,23 @@ WSGI_APPLICATION = 'kenauto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd9v37da12022i9',
+#         'HOST': 'ec2-52-45-83-163.compute-1.amazonaws.com',
+#         'PORT': 5432,
+#         'USER': 'hxhzumklstlsxd',
+#         'PASSWORD': '4b85d725655774955e02bf63e0f331c948de4f0d03503a304bd77ca5d8b58412'
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd9v37da12022i9',
-        'HOST': 'ec2-52-45-83-163.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'USER': 'hxhzumklstlsxd',
-        'PASSWORD': '4b85d725655774955e02bf63e0f331c948de4f0d03503a304bd77ca5d8b58412'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 
 
