@@ -88,23 +88,23 @@ WSGI_APPLICATION = 'kenauto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd9v37da12022i9',
-#         'HOST': 'ec2-52-45-83-163.compute-1.amazonaws.com',
-#         'PORT': 5432,
-#         'USER': 'hxhzumklstlsxd',
-#         'PASSWORD': '4b85d725655774955e02bf63e0f331c948de4f0d03503a304bd77ca5d8b58412'
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db_name',
+        'HOST': 'you host',
+        'PORT': 5432,
+        'USER': 'db_user',
+        'PASSWORD': 'db_pass'
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 
@@ -170,15 +170,11 @@ G_MAIL = env('G_MAIL')
 
 
 # s3 configurations
-
-AWS_ACCESS_KEY_ID="AKIAVNWRGBHBAWSEU33Q"
-AWS_SECRET_ACCESS_KEY='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'
-AWS_STORAGE_BUCKET_NAME='kodicar'
 AWS_QUERYSTRING_AUTH = False
 
-# AWS_ACCESS_KEY_ID=env('AWS_ACCESS_KEY_ID')
-# AWS_SECRET_ACCESS_KEY=env('AWS_SECRET_ACCESS_KEY')
-# AWS_STORAGE_BUCKET_NAME=env('AWS_SECRET_ACCESS_KEY')
+AWS_ACCESS_KEY_ID=env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY=env('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME=env('AWS_SECRET_ACCESS_KEY')
 
 
 # s3 storages
